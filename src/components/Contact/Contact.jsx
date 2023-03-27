@@ -3,7 +3,7 @@ import React from "react";
 const Contact = ({social,contact}) => {
   return (
     <>
-      <div className="contacts" style={{backgroundColor :"rgb(234, 234, 234)"}}>
+      <div id="contacts" className="contacts" style={{backgroundColor :"rgb(234, 234, 234)"}}>
         <img
           src="images/svg/contacts/contactsRed.svg"
           alt="contacts"
@@ -23,7 +23,7 @@ const Contact = ({social,contact}) => {
                     type="text"
                     name="Name"
                     className="form-input border-primary"
-                    value="hamid"
+                    value=""
                   />
                 </div>
                 <div className="input-container">
@@ -35,7 +35,7 @@ const Contact = ({social,contact}) => {
                     type="email"
                     name="Email"
                     className="form-input border-primary"
-                    value="hamid"
+                    value=""
                   />
                 </div>
                 <div className="input-container">

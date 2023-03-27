@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Landing from './components/Landing/Landing';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import BackToTop from './components/BackToTop/BackToTop';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -29,6 +30,7 @@ root.render(
     <Landing social={social}/>
     <About/>
     <Contact social={social} contact={contact}/>
+    <BackToTop/>
   </React.StrictMode>
 );
 
