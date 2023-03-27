@@ -15,7 +15,7 @@ const Contact = ({social,contact}) => {
             <div className="contacts-form">
               <form>
                 <div className="input-container">
-                  <label for="Name" className="color-primary">
+                  <label htmlFor="Name" className="color-primary">
                     نام
                   </label>
                   <input
@@ -23,11 +23,11 @@ const Contact = ({social,contact}) => {
                     type="text"
                     name="Name"
                     className="form-input border-primary"
-                    value=""
+                    value="hamid"
                   />
                 </div>
                 <div className="input-container">
-                  <label for="Email" className="color-primary">
+                  <label htmlFor="Email" className="color-primary">
                     ایمیل
                   </label>
                   <input
@@ -35,11 +35,11 @@ const Contact = ({social,contact}) => {
                     type="email"
                     name="Email"
                     className="form-input border-primary"
-                    value=""
+                    value="hamid"
                   />
                 </div>
                 <div className="input-container">
-                  <label for="Message" className="color-primary">
+                  <label htmlFor="Message" className="color-primary">
                     پیام
                   </label>
                   <textarea
@@ -56,7 +56,7 @@ const Contact = ({social,contact}) => {
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
-                        stroke-width="0"
+                        strokeWidth="0"
                         t="1569683742680"
                         viewBox="0 0 1024 1024"
                         version="1.1"
@@ -72,7 +72,7 @@ const Contact = ({social,contact}) => {
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
-                        stroke-width="0"
+                        strokeWidth="0"
                         viewBox="0 0 1024 1024"
                         className="success-icon"
                         height="1em"
@@ -94,10 +94,10 @@ const Contact = ({social,contact}) => {
                   <svg
                     stroke="currentColor"
                     fill="none"
-                    stroke-width="2"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -113,10 +113,10 @@ const Contact = ({social,contact}) => {
                   <svg
                     stroke="currentColor"
                     fill="none"
-                    stroke-width="2"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -131,22 +131,22 @@ const Contact = ({social,contact}) => {
                   <svg
                     stroke="currentColor"
                     fill="none"
-                    stroke-width="0"
+                    strokeWidth="0"
                     viewBox="0 0 24 24"
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
                     ></path>
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     ></path>
                   </svg>
@@ -163,7 +163,7 @@ const Contact = ({social,contact}) => {
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
+                    strokeWidth="0"
                     viewBox="0 0 496 512"
                     height="1em"
                     width="1em"
@@ -181,7 +181,7 @@ const Contact = ({social,contact}) => {
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
+                    strokeWidth="0"
                     viewBox="0 0 448 512"
                     height="1em"
                     width="1em"
@@ -199,7 +199,7 @@ const Contact = ({social,contact}) => {
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
+                    strokeWidth="0"
                     viewBox="0 0 448 512"
                     height="1em"
                     width="1em"

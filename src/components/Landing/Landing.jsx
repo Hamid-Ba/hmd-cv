@@ -10,7 +10,7 @@ const Landing = ({social}) => {
               <svg
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 448 512"
                 className="landing--social"
                 aria-label="LinkedIn"
@@ -26,7 +26,7 @@ const Landing = ({social}) => {
               <svg
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 496 512"
                 className="landing--social"
                 aria-label="GitHub"
@@ -59,7 +59,7 @@ const Landing = ({social}) => {
               <a href={social.quera} download="resume" target="_blank" rel="noreferrer">
                 <button
                   className="MuiButtonBase-root MuiButton-root MuiButton-text resume-btn color-primary border-primary"
-                  tabindex="0"
+                  tabIndex="0"
                   type="button"
                 >
                   <span className="MuiButton-label">دانلود رزومه</span>
@@ -69,7 +69,7 @@ const Landing = ({social}) => {
               <a spy="true" duration="2000" href="/#contacts">
                 <button
                   className="MuiButtonBase-root MuiButton-root MuiButton-text contact-btn bg-primary border-primary"
-                  tabindex="0"
+                  tabIndex="0"
                   type="button"
                 >
                   <span className="MuiButton-label">تماس با من</span>
