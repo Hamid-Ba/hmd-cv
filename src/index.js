@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Navbar from './components/Navbar/Navbar';
 import Landing from './components/Landing/Landing';
+import About from './components/About/About';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +18,7 @@ root.render(
   <React.StrictMode>
     <Navbar />
     <Landing social={social}/>
+    <About/>
   </React.StrictMode>
 );
 
