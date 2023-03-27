@@ -1387,7 +1387,7 @@ img {
 }
 
 /* Themes */
-.yellow .bg-primary {
+/* .yellow .bg-primary {
   background-color: rgb(232, 180, 76);
 }
 
@@ -1397,9 +1397,9 @@ img {
 
 .yellow .border-primary {
   border: 3px solid #e9ad35;
-}
+} */
 
-/* .red .bg-primary{
+.red .bg-primary{
   background-color: #f03939;
 }
 
@@ -1409,7 +1409,7 @@ img {
 
 .red .border-primary{
   border: 3px solid #f03939;
-} */
+}
 
 
 /* .purple .bg-primary{

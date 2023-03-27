@@ -2,12 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Navbar from './components/Navbar/Navbar';
+import Landing from './components/Landing/Landing';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const social = {
+  github : "https://github.com/Hamid-Ba",
+  linkdin : "https://linkedin.com/in/hamid-balalzadeh",
+  quera : "https://quera.org/profile/HamidBa"
+}
+
 root.render(
   <React.StrictMode>
     <Navbar />
+    <Landing social={social}/>
   </React.StrictMode>
 );
 
