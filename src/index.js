@@ -7,6 +7,7 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import BackToTop from './components/BackToTop/BackToTop';
 import reportWebVitals from './reportWebVitals';
+import SkillsList from './components/Skill/SkillsList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -29,6 +30,7 @@ root.render(
     <Navbar />
     <Landing social={social}/>
     <About/>
+    <SkillsList/>
     <Contact social={social} contact={contact}/>
     <BackToTop/>
   </React.StrictMode>
