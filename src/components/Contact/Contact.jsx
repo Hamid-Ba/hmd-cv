@@ -1,6 +1,40 @@
 import React from "react";
+import {useFormik} from "formik";
+import * as yup from "yup";
 
 const Contact = ({social,contact}) => {
+  
+  // const validate = values => {
+  //   let errors = {};
+
+  //   if (!values.Email)
+  //     errors.Email = "ایمیل خود را وارد نمایید";
+  //   else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.Email))
+  //     errors.Email = "ایمیل وارد شما نامعتبر است";
+
+  //   if(!values.Message)
+  //     errors.Message = "پیام خود را وارد نمایید";
+
+  //   return errors
+  // }
+
+  const validationSchema = yup.object().shape({
+    Name : yup.string(),
+    Email : yup.string().required("ایمیل خود را وارد نمایید").email("ایمیل وارد شما نامعتبر است"),
+    Message : yup.string().required("پیام خود را وارد نمایید")
+  })
+
+  const formik = useFormik({
+    initialValues : {
+      Name: "",
+      Email: "" ,
+      Message: "" 
+    },
+    validationSchema,
+    onSubmit : values => {
+      alert(JSON.stringify(values))
+    }
+  })
   return (
     <>
       <div id="contacts" className="contacts" style={{backgroundColor :"rgb(234, 234, 234)"}}>
@@ -13,7 +47,7 @@ const Contact = ({social,contact}) => {
           <h1 className="color-primary">تماس با من</h1>
           <div className="contacts-body">
             <div className="contacts-form">
-              <form>
+              <form onSubmit={formik.handleSubmit}>
                 <div className="input-container">
                   <label htmlFor="Name" className="color-primary">
                     نام
@@ -23,7 +57,8 @@ const Contact = ({social,contact}) => {
                     type="text"
                     name="Name"
                     className="form-input border-primary"
-                    value=""
+                    value={formik.values.Name}
+                    onChange={formik.handleChange}
                   />
                 </div>
                 <div className="input-container">
@@ -35,8 +70,10 @@ const Contact = ({social,contact}) => {
                     type="email"
                     name="Email"
                     className="form-input border-primary"
-                    value=""
+                    value={formik.values.Email}
+                    onChange={formik.handleChange}
                   />
+                  {formik.errors.Email && <p className="text-sm text-red-500 mt-2">{formik.errors.Email}</p>}
                 </div>
                 <div className="input-container">
                   <label htmlFor="Message" className="color-primary">
@@ -47,7 +84,10 @@ const Contact = ({social,contact}) => {
                     type="text"
                     name="Message"
                     className="form-message border-primary"
+                    value={formik.values.Message}
+                    onChange={formik.handleChange}
                   ></textarea>
+                  {formik.errors.Message && <p className="text-sm text-red-500 mb-3">{formik.errors.Message}</p>}
                 </div>
                 <div className="submit-btn">
                   <button type="submit" className="bg-primary">
