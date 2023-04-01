@@ -2,9 +2,9 @@ import React from "react";
 
 const PostList = () => {
   return (
-    <div className="w-full px-5 py-6">
+    <div className="w-4/5 mx-auto px-5 py-6">
       <div className="border-b mb-5">
-        <p>مقالات</p>
+        <p className="text-rose-600">مقالات</p>
       </div>
 
       <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-4">
