@@ -1,4 +1,6 @@
 import React from "react";
+import posts  from "../../data/posts";
+import {Link} from "react-router-dom"
 
 const PostList = () => {
   return (
@@ -8,126 +10,44 @@ const PostList = () => {
       </div>
 
       <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-4">
-        <div className="rounded shadow-xl overflow-hidden">
-          <a href="">
-            <img src="images/projects/project1.jpg" alt="" className="w-full" />
-          </a>
+        {posts.map((post, index) => (
+          <div className="rounded shadow-xl overflow-hidden">
+            <Link to={`/blog/${post.slug}`}>
+              <img src={`/images/${post.image}`} alt="" className="w-full" />
+            </Link>
 
-          <div className="px-6 py-4 mb-auto">
-            <div className="mb-3 text-rose-400">
-              <a href="#" className="mx-1 text-xs">
-                دسته 1
-              </a>
-              <a href="#" className="mx-1 text-xs">
-                دسته 2
-              </a>
-              <a href="#" className="mx-1 text-xs">
-                دسته 3
-              </a>
-            </div>
-            <a
-              href="#"
-              className="font-medium text-lg inline-block hover:text-rose-500 transition duration-300"
-            >
-              عنوان مقاله
-            </a>
-            <p className="text-gray-500 text-sm mt-1">
-              توضیحات کوتاه راجب مقاله
-            </p>
-
-            <div className="justify-end my-4 flex item-center">
-              <div className="text-xs ml-2 pt-1">
-                <p>حمید بلال زاده</p>
-                <p>۱ آبان ۱۳۷۹</p>
+            <div className="px-6 py-4 mb-auto">
+              <div className="mb-3 text-rose-400">
+                {post.categories.map((category, index) => (
+                  <a href={category.slug} className="mx-1 text-xs">
+                    {category.title}
+                  </a>
+                ))}
               </div>
-              <img
-                src="images/hmd_programmer.png"
-                alt=""
-                className="rounded-full w-10 h-10"
-              />
+              <Link
+                to={`/blog/${post.slug}`}
+                className="font-medium text-lg inline-block hover:text-rose-500 transition duration-300"
+              >
+                {post.title}
+              </Link>
+              <p className="text-gray-500 text-sm mt-1">
+                {post.shortDescription}
+              </p>
+
+              <div className="justify-end my-4 flex item-center">
+                <div className="text-xs ml-2 pt-1">
+                  <p>{post.author}</p>
+                  <p>{post.insertedAt}</p>
+                </div>
+                <img
+                  src="images/hmd_programmer.png"
+                  alt=""
+                  className="rounded-full w-10 h-10"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="rounded shadow-xl overflow-hidden">
-          <a href="">
-            <img src="images/projects/project1.jpg" alt="" className="w-full" />
-          </a>
-
-          <div className="px-6 py-4 mb-auto">
-            <div className="mb-3 text-rose-400">
-              <a href="#" className="mx-1 text-xs">
-                دسته 1
-              </a>
-              <a href="#" className="mx-1 text-xs">
-                دسته 2
-              </a>
-              <a href="#" className="mx-1 text-xs">
-                دسته 3
-              </a>
-            </div>
-            <a
-              href="#"
-              className="font-medium text-lg inline-block hover:text-rose-500 transition duration-300"
-            >
-              عنوان مقاله
-            </a>
-            <p className="text-gray-500 text-sm mt-1">
-              توضیحات کوتاه راجب مقاله
-            </p>
-
-            <div className="justify-end my-4 flex item-center">
-              <div className="text-xs ml-2 pt-1">
-                <p>حمید بلال زاده</p>
-                <p>۱ آبان ۱۳۷۹</p>
-              </div>
-              <img
-                src="images/hmd_programmer.png"
-                alt=""
-                className="rounded-full w-10 h-10"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="rounded shadow-xl overflow-hidden">
-          <a href="">
-            <img src="images/projects/project1.jpg" alt="" className="w-full" />
-          </a>
-
-          <div className="px-6 py-4 mb-auto">
-            <div className="mb-3 text-rose-400">
-              <a href="#" className="mx-1 text-xs">
-                دسته 1
-              </a>
-              <a href="#" className="mx-1 text-xs">
-                دسته 2
-              </a>
-              <a href="#" className="mx-1 text-xs">
-                دسته 3
-              </a>
-            </div>
-            <a
-              href="#"
-              className="font-medium text-lg inline-block hover:text-rose-500 transition duration-300"
-            >
-              عنوان مقاله
-            </a>
-            <p className="text-gray-500 text-sm mt-1">
-              توضیحات کوتاه راجب مقاله
-            </p>
-
-            <div className="justify-end my-4 flex item-center">
-              <div className="text-xs ml-2 pt-1">
-                <p>حمید بلال زاده</p>
-                <p>۱ آبان ۱۳۷۹</p>
-              </div>
-              <img
-                src="images/hmd_programmer.png"
-                alt=""
-                className="rounded-full w-10 h-10"
-              />
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
